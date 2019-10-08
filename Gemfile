@@ -16,6 +16,7 @@ gem 'webpacker', '~> 3.5'
 
 gem 'yt', '~> 0.29.1'
 gem 'google-api-client'
+
 gem 'faraday'
 gem 'jquery'
 gem 'figaro'
