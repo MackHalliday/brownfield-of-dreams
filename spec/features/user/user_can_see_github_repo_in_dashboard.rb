@@ -2,13 +2,16 @@ require 'rails_helper'
 
 describe 'User Dashboard' do
   it 'can display GitHub repos' do
-    skip 
+    # skip
   # As a logged in user
   # When I visit /dashboard
   # Then I should see a section for "Github"
   # And under that section I should see a list of 5 repositories
-    # with the name of each Repo linking to the repo on Github
-
+  #   with the name of each Repo linking to the repo on Github
+  json_response = File.open('./fixtures/git_hub_data.json')
+    stub_request(:get, "https://api.github.com/user/repos")
+    .to_return(status: 200, body: json_response)
+    
     user = create(:user)
 
     visit '/'
