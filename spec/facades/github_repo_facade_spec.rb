@@ -23,6 +23,7 @@ describe GithubRepoFacade do
     data = facade.repo_data
 
     expect(data).to be_a Array
+    expect(data.count).to eq(5)
     expect(data[0]).to have_key(:name)
     expect(data[0]).to have_key(:html_url)
   end
