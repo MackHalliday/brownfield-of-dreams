@@ -4,19 +4,24 @@ class GithubRepoFacade
     @service = GithubApiService.new
   end
 
-  def repo_data
+  def repos_data
+    raw_repo_data.fliter_name_url
+  end
+
+  def raw_repo_data
+    service.get_user_data
+  end
+
+  def fliter_name_url
     binding.pry
   end
 
-  # def raw repo data
-  # service.get_user_data
-  # end
 
-  #def filter
-    #finds url and name
-  # end
 
   #def present to view
-
+ #
+ # def github_api_service
+ #    GithubApiService.new
+ # end
 
 end
