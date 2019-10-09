@@ -4,24 +4,18 @@ class GithubRepoFacade
     @service = GithubApiService.new
   end
 
-  def repo_data
-    raw_repo_data.fliter_name_url
-  end
-
   def raw_repo_data
-    service.get_user_data
+    @service.get_user_data
   end
 
-  def fliter_name_url
-    binding.pry
+  def filter_name_url
+    raw_repo_data.map do |data|
+      {name: data[:name],
+        html_url: data[:owner][:html_url] }
+    end
   end
 
-
-
-  #def present to view
- #
- # def github_api_service
- #    GithubApiService.new
- # end
-
+  def repo_data
+    filter_name_url[0, 5]
+  end
 end
