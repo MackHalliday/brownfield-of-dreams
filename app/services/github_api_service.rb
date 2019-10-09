@@ -3,7 +3,6 @@ class GithubApiService
   def get_user_data
     json_response = conn.get("user/repos")
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
-    # member_data = parsed_data[:results]
   end
 
 
