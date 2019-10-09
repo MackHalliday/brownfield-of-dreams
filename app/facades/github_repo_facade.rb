@@ -4,7 +4,7 @@ class GithubRepoFacade
     @service = GithubApiService.new
   end
 
-  def repos_data
+  def repo_data
     raw_repo_data.fliter_name_url
   end
 
