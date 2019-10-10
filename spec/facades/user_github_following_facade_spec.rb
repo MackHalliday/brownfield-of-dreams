@@ -17,7 +17,7 @@ describe GithubFollowingFacade do
     stub_request(:get, "https://api.github.com/user/repos")
     .to_return(status: 200, body: json_response)
 
-    data = facade.repo_data
+    data = facade.following_data
 
     expect(data[0]).to be_a(Following)
     expect(data.count).to eq(5)
