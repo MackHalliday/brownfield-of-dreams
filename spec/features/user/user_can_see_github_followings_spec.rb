@@ -20,16 +20,14 @@ describe 'User Dashboard' do
 
     visit dashboard_path
 
-    save_and_open_page
-
     expect(page).to have_css(".github-following")
 
     within ".github-following" do
-      expect(page).to have_link("following_1")
-      expect(page).to have_link("following_2")
-      expect(page).to have_link("following_3")
-      expect(page).to have_link("following_4")
-      expect(page).to have_link("following_5")
+      expect(page).to have_link("alect47")
+      expect(page).to have_link("corneliusellen")
+      expect(page).to have_link("shaviland")
+      expect(page).to have_link("Kate-v2")
+      expect(page).to have_link("markmahowald")
     end
   end
 end
