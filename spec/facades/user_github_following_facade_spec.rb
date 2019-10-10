@@ -20,7 +20,7 @@ describe GithubFollowingFacade do
     data = facade.following_data
 
     expect(data[0]).to be_a(Following)
-    expect(data.count).to eq(5)
+    expect(data.count).to eq(10)
     expect(data[0].login).to_not eq(nil)
     expect(data[0].html_url).to_not eq(nil)
   end

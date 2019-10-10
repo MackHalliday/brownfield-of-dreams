@@ -3,10 +3,15 @@ require 'rails_helper'
 describe 'User Dashboard' do
   it 'displays Github repos' do
 
-    json_response = File.open('./spec/fixtures/github_repo_view_data.json')
+    json_repo_response = File.open('./spec/fixtures/github_repo_view_data.json')
 
     stub_request(:get, "https://api.github.com/user/repos")
-    .to_return(status: 200, body: json_response)
+    .to_return(status: 200, body: json_repo_response)
+
+    json_following_response = File.open('./spec/fixtures/github_following_data.json')
+
+    stub_request(:get, "https://api.github.com/user/following")
+      .to_return(status: 200, body: json_following_response)
 
     user = create(:user, github_token: ENV["GITHUB_API_KEY"])
 
