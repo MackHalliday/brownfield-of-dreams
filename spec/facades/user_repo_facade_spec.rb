@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-describe GithubRepoFacade do
+describe UserFacade do
   it 'initializes GithubApiService' do
     user = create(:user, github_token: ENV["GITHUB_API_KEY"])
-    facade = GithubRepoFacade.new(user)
+    facade = UserFacade.new(user)
 
     expect(facade.service).to be_a(GithubApiService)
   end
 
   it 'can return github repo data' do
     user = create(:user, github_token: ENV["GITHUB_API_KEY"])
-    facade = GithubRepoFacade.new(user)
+    facade = UserFacade.new(user)
 
     json_response = File.open('./spec/fixtures/github_data.json')
 

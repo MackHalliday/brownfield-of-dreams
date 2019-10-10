@@ -3,9 +3,7 @@
 class UsersController < ApplicationController
   def show
     if current_user.github_token?
-      facade = GithubRepoFacade.new(current_user)
-      @repos = facade.repo_data
-      @followings = GithubFollowingFacade.new(current_user).following_data
+      @github_facade = UserFacade.new(current_user)
     end
   end
 

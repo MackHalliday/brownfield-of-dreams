@@ -13,7 +13,7 @@
     <h4>Github Repositories</h4>
     <section class="github-repositories">
       <ul>
-      <% @repos.each do |repo| %>
+      <% @github_facade.repo_data.each do |repo| %>
         <li><%= link_to repo.name, repo.html_url %></li>
       <% end %>
     </ul>
@@ -22,7 +22,7 @@
     <h4> Following </h4>
     <section class="github-following">
       <ul>
-      <% @followings.each do |following| %>
+      <% @github_facade.following_data.each do |following| %>
         <li><%= link_to following.login, following.html_url %></li>
       <% end %>
     </ul>
