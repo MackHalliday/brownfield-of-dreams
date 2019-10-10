@@ -9,7 +9,8 @@
   </ul>
 
   <% if current_user.github_token? %>
-    <h3>Github Repositories</h3>
+  <h3>Github</h3>
+    <h4>Github Repositories</h4>
     <section class="github-repositories">
       <ul>
       <% @repos.each do |repo| %>
@@ -18,7 +19,7 @@
     </ul>
     </section>
 
-    <h3> Following </h3>
+    <h4> Following </h4>
     <section class="github-following">
       <ul>
       <% @followings.each do |following| %>
