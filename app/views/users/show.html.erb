@@ -22,7 +22,7 @@
     <section class="github-following">
       <ul>
       <% @followings.each do |following| %>
-        <li><%= link_to following.name, following.html_url %></li>
+        <li><%= link_to following.login, following.html_url %></li>
       <% end %>
     </ul>
     </section>
