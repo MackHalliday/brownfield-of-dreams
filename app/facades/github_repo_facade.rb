@@ -8,7 +8,7 @@ class GithubRepoFacade
 
   # refactor to split method
   def all_repo_data
-    @service.get_user_data(@current_user).map do |d|
+    @service.get_user_repo_data(@current_user).map do |d|
       Repo.new(d)
     end
   end
