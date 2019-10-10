@@ -1,8 +1,8 @@
 class Follower
-  attr_reader :login, :url
+  attr_reader :login, :html_url
 
   def initialize(hash)
     @login = hash[:login]
-    @url = hash[:url]
+    @html_url = hash[:html_url]
   end
 end

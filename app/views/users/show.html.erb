@@ -19,8 +19,15 @@
       <h3>Github Followers</h3>
       <section class="github-followers">
         <ul>
-          <% @followers.each do |follower| %>
-          <li><%= link_to follower.login, follower.url %></li>
+          <% @facades.all_follower_data.each do |follower| %>
+          <li><%= link_to follower.login, follower.html_url %></li>
+          <% end %>
+        </ul>
+      <h3>Github Following</h3>
+      <section class="github-following">
+        <ul>
+          <% @facades.following_data.each do |follower| %>
+          <li><%= link_to follower.login, follower.html_url %></li>
           <% end %>
         </ul>
       </section>

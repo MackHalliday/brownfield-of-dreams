@@ -28,7 +28,7 @@ describe 'Github API service' do
     expect(raw_data).to be_a(Array)
 
     expect(raw_data.first).to have_key(:login)
-    expect(raw_data.first).to have_key(:url)
+    expect(raw_data.first).to have_key(:html_url)
   end
 
 
