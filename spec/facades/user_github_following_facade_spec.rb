@@ -14,14 +14,14 @@ describe GithubFollowingFacade do
 
     json_response = File.open('./spec/fixtures/github_following_data.json')
 
-    stub_request(:get, "https://api.github.com/user/repos")
+    stub_request(:get, "https://api.github.com/user/following")
     .to_return(status: 200, body: json_response)
 
     data = facade.following_data
 
     expect(data[0]).to be_a(Following)
     expect(data.count).to eq(5)
-    expect(data[0].name).to_not eq(nil)
+    expect(data[0].login).to_not eq(nil)
     expect(data[0].html_url).to_not eq(nil)
   end
 end
