@@ -1,7 +1,12 @@
 class GithubApiService
 
-  def get_user_data(user)
+  def get_user_repo_data(user)
     json_response = conn(user).get("user/repos")
+    parsed_data = JSON.parse(json_response.body, symbolize_names: true)
+  end
+
+  def get_user_following_data(user)
+    json_response = conn(user).get("user/following")
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
   end
 
