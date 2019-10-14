@@ -24,11 +24,14 @@ class UsersController < ApplicationController
 
   def github_auth
     current_user.update_attribute(:github_token, github_token)
-    redirect_to dashboard_path
+  end
+
+  def register_user
+    user = User.find(params[:id])
+    user.update_attribute(:account_registered, true)
   end
 
   private
-
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
