@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 describe 'visitor sees a video show' do
@@ -9,9 +8,9 @@ describe 'visitor sees a video show' do
     visit '/'
 
     click_on tutorial.title
-    click_button 'Bookmark'
 
-    expect(current_path).to eq(tutorial_path(tutorial))
-    expect(page).to have_content("User must login to bookmark videos.")
+    expect(page).to have_current_path(tutorial_path(tutorial), ignore_query: true)
+    expect(page).to have_content(video.title)
+    expect(page).to have_content(tutorial.title)
   end
 end
