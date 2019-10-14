@@ -1,3 +1,8 @@
+<div data-alert class="alert-box">
+  <%= notice %>
+  <a href="#" class="close">&times;</a>
+</div>
+
 <main class="tutorials">
 <h2><%= @facade.title %></h2>
 <h1 id="message"></h1>
@@ -19,7 +24,7 @@
       <% if current_user %>
       <%= button_to "Bookmark", user_videos_path(video_id: @facade.current_video.id, user_id: current_user.id), method: :post, class: "btn btn-outline mb1 teal" %>
       <% else %>
-      <%= link_to "Bookmark", login_path, class: "btn btn-outline mb1 teal" %>
+      <%= link_to "Bookmark", user_videos_login_to_bookmark_path, class: "btn btn-outline mb1 teal" %>
       <% end %>
     </div>
   </div>
