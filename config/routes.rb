@@ -45,5 +45,7 @@ Rails.application.routes.draw do
     resources :videos, only: %i[show index]
   end
 
+  get '/user_videos/login_to_bookmark', to: 'user_videos#login_to_bookmark'
+
   resources :user_videos, only: %i[create destroy]
 end
