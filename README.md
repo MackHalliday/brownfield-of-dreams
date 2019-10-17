@@ -55,7 +55,7 @@ Update YouTube API Key
 - Create variable `ENV['YOUTUBE_API_KEY']`
 - Set variable equal to your YouTube API Key
 
-Please click [here](https://developers.google.com/youtube/v3/getting-started) to view instruction on obtaining an YouTube API Key
+[Instruction to Obtain YouTube API Key](https://developers.google.com/youtube/v3/getting-started)
 
 ## Testing Suite
 Run the test suite:
