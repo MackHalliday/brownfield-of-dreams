@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 describe 'github api service' do
   it "github repo data", :vcr do
 
@@ -47,7 +46,7 @@ describe 'github api service' do
     expect(raw_data.first).to have_key(:html_url)
   end
 
-  it "search user by login" do
+  it "search user by login", :vcr do
     user = create(:user, github_token: ENV["GITHUB_API_KEY"])
 
     service = GithubApiService.new

@@ -5,7 +5,7 @@ require 'rails_helper'
 
 describe 'Hide classroom content' do
 
-  it 'only logged in users can see tutorials marked classroom content' do
+  it 'only logged in users can see tutorials marked classroom content', :vcr do
 
     user = create(:user, github_token: ENV["GITHUB_API_KEY"])
 
