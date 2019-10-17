@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 class Tutorial < ApplicationRecord
   has_many :videos, -> { order(position: :ASC) }, dependent: :destroy
@@ -5,7 +6,7 @@ class Tutorial < ApplicationRecord
   accepts_nested_attributes_for :videos
   validates_presence_of :title
   validates_presence_of :description
-  validates_presence_of :thumbnail
+  validates :thumbnail, url: true
 
   def self.open_content
     where(classroom: false)
