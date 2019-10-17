@@ -52,7 +52,7 @@ $ rake db:seed
 
 Update YouTube API Key 
 - Open `application.yml` file
-- Create variable ``ENV['YOUTUBE_API_KEY']`
+- Create variable `ENV['YOUTUBE_API_KEY']`
 - Set variable equal to your YouTube API Key
 
 ## Testing Suite
