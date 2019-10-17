@@ -11,7 +11,7 @@ A visitor is able to see all of the content on the application but in order to b
 
 Projects based on the original code base [Brownfield Of Dreams](https://github.com/turingschool-examples/brownfield-of-dreams). Additional functionality and tested has been added to the application. 
 
-** New Functionality ** 
+**New Functionality** 
 - When new user registered, user receives email to activate account 
 - Application can authenticate users using GitHub
 - After authenticating with GitHub, user can view GitHub repos, following, and followers in User dashboard
