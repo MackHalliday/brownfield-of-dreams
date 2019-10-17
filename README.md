@@ -50,10 +50,21 @@ Update YouTube API Key
 - Create variable ``ENV['YOUTUBE_API_KEY']`
 - Set variable equal to your YouTube API Key
 
+## Testing Suite
 Run the test suite:
 ```ruby
 $ bundle exec rspec
 ```
+
+## Running Application Locally 
+Run application locally:
+```ruby
+$ rails s
+```
+- Visit `http://localhost:3000/` in Chrome browser 
+
+To view emails sent by application: 
+- Visit `http://localhost:1080/` in Chrome browser
 
 ## Technologies
 * [Stimulus](https://github.com/stimulusjs/stimulus)
