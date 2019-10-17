@@ -5,6 +5,10 @@
 
 ### About the Project
 
+* Project created based on the requirements for [Brownfield Of Dreams](https://github.com/turingschool-examples/brownfield-of-dreams).
+
+* [GitHub Project Board](https://github.com/MackHalliday/brownfield-of-dreams/projects/1)
+
 This is a Ruby on Rails application used to organize YouTube content used for online learning. Each tutorial is a playlist of video segments. Within the application an admin is able to create tags for each tutorial in the database. A visitor or registered user can then filter tutorials based on these tags.
 
 A visitor is able to see all of the content on the application but in order to bookmark a segment they will need to register. Once registered a user can bookmark any of the segments in a tutorial page.
@@ -19,11 +23,6 @@ Projects based on the original code base [Brownfield Of Dreams](https://github.c
 - User can send invite by searching for GitHub handle 
 - User can see bookmarked videos in User Dashboard 
 - Admin can create new tutorial 
-
-
-* Project created based on the requirements for [Brownfield Of Dreams](https://github.com/turingschool-examples/brownfield-of-dreams).
-
-* [GitHub Project Board](https://github.com/MackHalliday/brownfield-of-dreams/projects/1)
 
 ## Local Setup
 
