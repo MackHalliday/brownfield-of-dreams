@@ -9,10 +9,21 @@ This is a Ruby on Rails application used to organize YouTube content used for on
 
 A visitor is able to see all of the content on the application but in order to bookmark a segment they will need to register. Once registered a user can bookmark any of the segments in a tutorial page.
 
+Projects based on the original code base [Brownfield Of Dreams](https://github.com/turingschool-examples/brownfield-of-dreams). Additional functionality and tested has been added to the application. 
+
+** New Functionality ** 
+- When new user registered, user receives email to activate account 
+- Application can authenticate users using GitHub
+- After authenticating with GitHub, user can view GitHub repos, following, and followers in User dashboard
+- User can add friends who are also authenticated with GitHub
+- User can send invite by searching for GitHub handle 
+- User can see bookmarked videos in User Dashboard 
+- Admin can create new tutorial 
+
+
 * Project created based on the requirements for [Brownfield Of Dreams](https://github.com/turingschool-examples/brownfield-of-dreams).
 
 * [GitHub Project Board](https://github.com/MackHalliday/brownfield-of-dreams/projects/1)
-
 
 ## Local Setup
 
