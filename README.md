@@ -71,6 +71,9 @@ $ rails s
 - Visit `http://localhost:3000/` in Chrome browser 
 
 To view emails sent by application: 
+```ruby
+$ mailcatcher
+```
 - Visit `http://localhost:1080/` in Chrome browser
 
 ## Technologies
@@ -84,6 +87,7 @@ To view emails sent by application:
 * [figaro](https://github.com/laserlemon/figaro)
 * [rubocop](https://github.com/rubocop-hq/rubocop)
 * [omniauth](https://github.com/omniauth/omniauth)
+* [mail-catcher](https://mailcatcher.me/)
 
 ### Versions
 * Ruby 2.4.1
