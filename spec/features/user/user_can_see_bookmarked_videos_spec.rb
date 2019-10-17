@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "user boomarks" do
-  it "can see bookmarked videos on user dashboard" do
+  it "can see bookmarked videos on user dashboard", :vcr do
 
     user = create(:user, github_id: 123, github_token: ENV["GITHUB_API_KEY"])
 
