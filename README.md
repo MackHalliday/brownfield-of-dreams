@@ -69,6 +69,8 @@ To view emails sent by application:
 * [vcr](https://github.com/vcr/vcr)
 * [selenium-webdriver](https://www.seleniumhq.org/docs/03_webdriver.jsp)
 * [chromedriver-helper](http://chromedriver.chromium.org/)
+* [figaro](https://github.com/laserlemon/figaro)
+* [rubocop](https://github.com/rubocop-hq/rubocop)
 
 ### Versions
 * Ruby 2.4.1
