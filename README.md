@@ -54,6 +54,7 @@ Update YouTube API Key
 - Open `application.yml` file
 - Create variable `ENV['YOUTUBE_API_KEY']`
 - Set variable equal to your YouTube API Key
+Please click [here](https://developers.google.com/youtube/v3/getting-started) to view instruction on obtaining an YouTube API Key
 
 ## Testing Suite
 Run the test suite:
