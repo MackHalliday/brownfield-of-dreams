@@ -5,7 +5,7 @@
 
 ### About the Project
 
-* Project created based on the requirements for [Brownfield Of Dreams](https://github.com/turingschool-examples/brownfield-of-dreams).
+* [Project Requirements](https://github.com/turingschool-examples/brownfield-of-dreams).
 
 * [GitHub Project Board](https://github.com/MackHalliday/brownfield-of-dreams/projects/1)
 
