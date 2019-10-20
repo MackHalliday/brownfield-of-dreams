@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-
   def new
     @user = User.new
   end
@@ -36,21 +35,20 @@ class UsersController < ApplicationController
     user.update_attribute(:account_registered, true)
   end
 
-  def invite_guest
-  end
+  def invite_guest; end
 
   def send_guest_invite
     @facade = UserFacade.new(current_user)
 
-    guest = @facade.find_github_user_data(params["github_handle"])
+    guest = @facade.find_github_user_data(params['github_handle'])
 
     if guest.not_exist?
-      flash[:error] = "The GitHub username you have entered is invalid."
+      flash[:error] = 'The GitHub username you have entered is invalid.'
       redirect_to invite_path
     elsif guest.email?
       UserMailer.invite_guest(current_user, guest, server_origin).deliver_now
       redirect_to dashboard_path
-      flash[:success] = "Successfully sent invite!"
+      flash[:success] = 'Successfully sent invite!'
     else
       redirect_to dashboard_path
       flash[:error] = "The Github user you selected doesn't have an email address associated with their account."
@@ -58,19 +56,20 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
 
   def github_token
-    request.env["omniauth.auth"]["credentials"]["token"]
+    request.env['omniauth.auth']['credentials']['token']
   end
 
   def github_id
-    request.env["omniauth.auth"]["uid"]
+    request.env['omniauth.auth']['uid']
   end
 
   def server_origin
-    request.env["HTTP_HOST"]
+    request.env['HTTP_HOST']
   end
 end

@@ -16,8 +16,8 @@ class Admin::VideosController < Admin::BaseController
     video = tutorial.videos.new(new_video_params.merge(thumbnail: thumbnail))
 
     if video.save
-        flash[:success] = 'Successfully created video.'
-        redirect_to edit_admin_tutorial_path(id: tutorial.id)
+      flash[:success] = 'Successfully created video.'
+      redirect_to edit_admin_tutorial_path(id: tutorial.id)
     else
       flash[:error] = video.errors.full_messages.to_sentence
       redirect_to edit_admin_tutorial_path(id: tutorial.id)
@@ -25,6 +25,7 @@ class Admin::VideosController < Admin::BaseController
   end
 
   private
+
   def video_params
     params.permit(:position)
   end

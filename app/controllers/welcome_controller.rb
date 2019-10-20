@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   def index
     if params[:tag]
       @tutorials = Tutorial.tagged_with(params[:tag])
-        .paginate(page: params[:page], per_page: 5)
+                           .paginate(page: params[:page], per_page: 5)
     elsif current_user
       @tutorials = Tutorial.all.paginate(page: params[:page], per_page: 5)
     else

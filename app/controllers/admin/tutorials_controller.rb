@@ -6,14 +6,14 @@ class Admin::TutorialsController < Admin::BaseController
   end
 
   def create
-     @tutorial = Tutorial.new(tutorial_params)
-     if @tutorial.save
-       flash[:success] = "You have created a new tutorial!"
-       redirect_to tutorial_path(@tutorial)
-     else
-       flash[:error] = @tutorial.errors.full_messages.to_sentence
-       render :new
-     end
+    @tutorial = Tutorial.new(tutorial_params)
+    if @tutorial.save
+      flash[:success] = 'You have created a new tutorial!'
+      redirect_to tutorial_path(@tutorial)
+    else
+      flash[:error] = @tutorial.errors.full_messages.to_sentence
+      render :new
+    end
   end
 
   def new
@@ -23,11 +23,11 @@ class Admin::TutorialsController < Admin::BaseController
   def update
     tutorial = Tutorial.find(params[:id])
     if tag_list_blank?
-      flash[:error] = "Tag name cannot be empty."
+      flash[:error] = 'Tag name cannot be empty.'
       redirect_to "/admin/tutorials/#{tutorial.id}/edit"
     else tutorial.update(tutorial_params)
-      flash[:success] = "#{tutorial.title} tagged!"
-      redirect_to "/admin/tutorials/#{tutorial.id}/edit"
+         flash[:success] = "#{tutorial.title} tagged!"
+         redirect_to "/admin/tutorials/#{tutorial.id}/edit"
     end
   end
 
@@ -37,13 +37,13 @@ class Admin::TutorialsController < Admin::BaseController
     redirect_to admin_dashboard_path
   end
 
-private
+  private
 
   def tutorial_params
-    params.require(:tutorial).permit(:tag_list, :title, :description, :thumbnail, :playlist_id, video_attributes: [:title, :description, :video_id, :thumbnail])
+    params.require(:tutorial).permit(:tag_list, :title, :description, :thumbnail, :playlist_id, video_attributes: %i[title description video_id thumbnail])
   end
 
   def tag_list_blank?
-    params["tutorial"]["tag_list"].empty?
+    params['tutorial']['tag_list'].empty?
   end
 end

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
- #Unused code, leaving for possible future applications
+  # Unused code, leaving for possible future applications
   # def find_bookmark(id)
   #   current_user.user_videos.find_by(video_id: id)
   # end
@@ -22,7 +22,6 @@ class ApplicationController < ActionController::Base
   # end
 
   def four_oh_four
-
-    render file: "/public/404"
+    render file: '/public/404'
   end
 end

@@ -13,9 +13,7 @@ Documentation:
 
 AllCops:
   Exclude:
-    - 'app/controllers/**/*'
     - 'Rakefile'
-    - 'app/services/*'
     - 'bin/*'
     - 'spec/**/*'
     - 'config/**/*'
