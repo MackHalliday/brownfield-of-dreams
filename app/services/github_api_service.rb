@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# testing commits for github issues
+
 class GithubApiService
   def get_repo_data(user)
     json_response = conn(user).get('user/repos')
